@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackSheetView" customModule="EICChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="indicatorView" destination="Q0F-Uf-DoL" id="wfS-ui-2OY"/>
+                <outlet property="messageLabel" destination="cPn-Dr-Yul" id="UAY-fG-16d"/>
+                <outlet property="view" destination="iN0-l3-epB" id="AA8-Db-2PH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="142"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0F-Uf-DoL">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="4"/>
+                    <color key="backgroundColor" name="wrong"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="1jE-7X-wlb"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="zuY-WX-LKh">
+                    <rect key="frame" x="24" y="24" width="345" height="94"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try again!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPn-Dr-Yul">
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQa-Jh-OcD" customClass="Button" customModule="EICChallenge" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="44" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Bik-4F-hDU"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Continue"/>
+                            <connections>
+                                <action selector="tapped:" destination="-1" eventType="touchUpInside" id="aUW-A3-oVS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Q0F-Uf-DoL" secondAttribute="trailing" id="GcN-R5-d8C"/>
+                <constraint firstAttribute="trailing" secondItem="zuY-WX-LKh" secondAttribute="trailing" constant="24" id="SGK-GS-w9A"/>
+                <constraint firstItem="Q0F-Uf-DoL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bgx-xN-pLX"/>
+                <constraint firstItem="zuY-WX-LKh" firstAttribute="top" secondItem="Q0F-Uf-DoL" secondAttribute="bottom" constant="20" id="cxa-m2-og3"/>
+                <constraint firstItem="zuY-WX-LKh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="mMa-AY-PyD"/>
+                <constraint firstAttribute="bottom" secondItem="zuY-WX-LKh" secondAttribute="bottom" constant="24" id="pXw-ul-Kpk"/>
+                <constraint firstItem="Q0F-Uf-DoL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rh6-lA-AUK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="119.84732824427481" y="264.78873239436621"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="wrong">
+            <color red="0.9882352941176471" green="0.18823529411764706" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

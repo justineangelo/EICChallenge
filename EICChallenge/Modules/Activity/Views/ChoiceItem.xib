@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChoiceItem" customModule="EICChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="choiceLabel" destination="svh-sZ-ZiH" id="vQL-oC-9gC"/>
+                <outlet property="emojiLabel" destination="Dpf-Sg-0b1" id="qWB-za-VEu"/>
+                <outlet property="view" destination="iN0-l3-epB" id="9Qj-k6-Tlt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dVp-p4-5G1">
+                    <rect key="frame" x="20" y="10" width="353" height="24"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ntN-m1-Tec">
+                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="🤯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpf-Sg-0b1">
+                                    <rect key="frame" x="0.0" y="0.0" width="27" height="28.666666666666668"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="PDX-Rn-ijP"/>
+                                <constraint firstItem="Dpf-Sg-0b1" firstAttribute="top" secondItem="ntN-m1-Tec" secondAttribute="top" id="nxT-Ic-S0x"/>
+                                <constraint firstItem="Dpf-Sg-0b1" firstAttribute="leading" secondItem="ntN-m1-Tec" secondAttribute="leading" id="wMG-gS-vl9"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="“What am I doing?!” " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svh-sZ-ZiH">
+                            <rect key="frame" x="36" y="0.0" width="317" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urf-hI-gJG">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="48"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="tapped:" destination="-1" eventType="touchUpInside" id="Lrn-zS-5OK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Urf-hI-gJG" secondAttribute="bottom" id="4hv-2U-2C4"/>
+                <constraint firstItem="Urf-hI-gJG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8rj-pf-e1K"/>
+                <constraint firstItem="Urf-hI-gJG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VIK-uZ-4Hq"/>
+                <constraint firstAttribute="trailing" secondItem="dVp-p4-5G1" secondAttribute="trailing" constant="20" id="o7y-10-YpE"/>
+                <constraint firstAttribute="trailing" secondItem="Urf-hI-gJG" secondAttribute="trailing" id="sGM-39-vwg"/>
+                <constraint firstAttribute="bottom" secondItem="dVp-p4-5G1" secondAttribute="bottom" constant="14" id="sPk-Gm-8Ju"/>
+                <constraint firstItem="dVp-p4-5G1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="tbZ-6l-n8b"/>
+                <constraint firstItem="dVp-p4-5G1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="v5M-kD-Zmz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="136.64122137404578" y="135.56338028169014"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
